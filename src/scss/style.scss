@@ -1,0 +1,208 @@
+@import "mixins.scss";
+//ШРИФТЫ
+@import url(https://fonts.googleapis.com/css?family=Sofia+Sans:regular,700,900,italic,700italic,900italic);
+
+//@import "fonts";
+
+//ШРИФТ ПО УМОЛЧАНИЮ
+$fontfamily: "Sofia Sans";
+
+//ПЕРЕМЕННЫЕ
+$minwidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1664;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+//ОБНУЛЕНИЕ
+@import "null.scss";
+
+body {
+	color: #fff;
+}
+body._lock {
+	overflow: hidden;
+}
+
+//ОБОЛОЧКА
+.wrapper {
+	overflow: hidden;
+	min-height: 100%; //чтобы wrapper был на всю высоту
+	background: url('../img/bg1.jpg') 0 0/100% 100% no-repeat;
+}
+
+//ОСНОВНАЯ СЕТКА
+
+//упрощенное
+._container {
+	max-width: 1664px;
+	padding: 0 30px; //задаем отступы по 15px чтобы контейнер не ударялся о края странички
+	margin: 0px auto; //центровка контейнера
+}
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ
+@import "ui.scss";
+@import "header.scss";
+@import "footer.scss";
+
+
+//==================================================================
+//MAIN BLOCK
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.mainscreen {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	&__container {
+	}
+	&__title {
+		font-size: 84px;
+		text-transform: uppercase;
+		line-height: 90px;
+		font-weight: 700;
+		padding-top: 150px;
+		padding-bottom: 20px;
+		text-align: center;
+		margin: 0 auto;
+		max-width: 800px;
+	}
+	&__subtitle {
+		font-style: italic;
+		font-size: 24px;
+		padding-bottom: 40px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	&__arrow {
+		width: 50px;
+		margin: 0 auto 60px auto;
+		img {
+			min-width: 100%;
+		}
+	}
+	&__projects {
+		max-width: 1300px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+}
+.projects {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		background-color: #686f84;
+	}
+	&__tab {
+		background-color: #e4e5ea;
+		font-size: 16px;
+		color: #3e4750;
+		font-weight: 700;
+		padding: 10px 15px;
+		text-transform: uppercase;
+	}
+	&__contact {
+		padding: 10px;
+	}
+	&__email {
+		img {
+			transition: 1s;
+			max-width: 100%;
+		}
+	}
+	&__telegram {
+		margin-left: 10px;
+		img {
+			transition: 1s;
+			max-width: 100%;
+		}
+	}
+	&__body {
+		background-color: #e4e5ea;
+		border-bottom: 2px solid #778898;
+	}
+	&__block {
+		padding: 30px;
+		color: #3e4750;
+		font-size: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		font-size: 44px;
+		padding-bottom: 30px;
+	}
+	&__description {
+		font-style: italic;
+		max-width: 600px;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	&__image {
+		padding-bottom: 30px;
+		img {
+			object-fit: cover;
+		}
+	}
+	&__button {
+		display: flex;
+	}
+	&__gp-link {
+		margin-right: 50px;
+		background-image: linear-gradient(to right, #fcb4c0 0%, #778898  51%, #fcb4c0  100%);
+		color: #e4e5ea;
+	}
+	&__gh-link {
+		background-image: linear-gradient(to right, #778898 0%, #fcb4c0  51%, #778898  100%);
+		color: #233000;
+	}
+}
+.projects__body:last-child {
+	border-bottom: none;
+}
+.projects__email:hover {
+	img {
+		width: 30%;
+	}
+	
+}
+.projects__telegram:hover {
+	img {
+		width: 30%;
+	}
+}
+.btn {
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px 0;
+	width: 150px;
+	background-size: 200% auto;
+	border-radius: 10px;
+	transition: 0.5s;
+	box-shadow: 0 0 20px #eee;
+	display: block;
+
+}
+.btn:hover {
+	background-position: right;
+	color: #fff;
+	text-decoration: none;
+}
+         
+.projects__gp-link:hover {
+	color: #233000;
+}
+
+
+
