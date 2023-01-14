@@ -23,4 +23,15 @@
 	}
 }
 //----------------------------------------
-
+@media (max-width: 700px) {
+	.header {
+		font-size: 22px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+@media (max-width: 500px) {
+	.header {
+		font-size: 18px;
+	}
+}

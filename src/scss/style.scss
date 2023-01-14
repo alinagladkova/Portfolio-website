@@ -139,8 +139,10 @@ body._lock {
 		align-items: center;
 	}
 	&__title {
+		max-width: 100%;
 		font-size: 44px;
 		padding-bottom: 30px;
+		text-align: center;
 	}
 	&__description {
 		font-style: italic;
@@ -150,7 +152,9 @@ body._lock {
 	}
 	&__image {
 		padding-bottom: 30px;
+		@include adaptiveValue ("height", 552, 200, 0);
 		img {
+			min-width: 100%;
 			object-fit: cover;
 		}
 	}
@@ -174,7 +178,6 @@ body._lock {
 	img {
 		width: 30%;
 	}
-	
 }
 .projects__telegram:hover {
 	img {
@@ -192,17 +195,92 @@ body._lock {
 	transition: 0.5s;
 	box-shadow: 0 0 20px #eee;
 	display: block;
-
 }
 .btn:hover {
 	background-position: right;
 	color: #fff;
 	text-decoration: none;
 }
-         
 .projects__gp-link:hover {
 	color: #233000;
 }
-
+//---------------------------------------------
+@media (max-width: 700px) {
+	.mainscreen {
+		&__title {
+			padding-top: 50px;
+			font-size: 64px;
+			line-height: 70px;
+		}
+		&__subtitle {
+			font-size: 20px;
+		}
+		&__arrow {
+			width: 40px;
+			margin-bottom: 30px;
+		}
+	}
+	.projects {
+		&__tab {
+			font-size: 14px;
+		}
+		&__block {
+			padding: 20px;
+			font-size: 14px;
+		}
+		&__title {
+			font-size: 34px;
+			padding-bottom: 20px;
+		}
+		&__description {
+			max-width: 400px;
+			padding-bottom: 20px;
+		}
+		&__image {
+			padding-bottom: 20px;
+			@include adaptiveValue ("height", 552, 200, 0);
+			img {
+				min-width: 100%;
+				object-fit: cover;
+			}
+		}
+		&__gp-link {
+			margin-right: 30px;
+		}
+	}
+	.btn {
+		font-size: 14px;
+		padding: 10px 0;
+		width: 130px;
+	}
+}
+@media (max-width: 450px) {
+	.mainscreen {
+		&__title {
+			font-size: 44px;
+			line-height: 50px;
+		}
+		&__subtitle {
+			font-size: 16px;
+		}
+		&__arrow {
+			width: 40px;
+		}
+	}
+	.projects {
+		&__title {
+			font-size: 26px;
+		}
+		&__image {
+			@include adaptiveValue ("height", 552, 150, 0);
+		}
+		&__gp-link {
+			margin-right: 10px;
+		}
+	}
+	.btn {
+		width: 100px;
+	}
+}
 
 
