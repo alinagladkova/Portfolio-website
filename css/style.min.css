@@ -148,6 +148,18 @@ body._lock {
   text-decoration: underline;
 }
 
+@media (max-width: 700px) {
+  .header {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    font-size: 18px;
+  }
+}
 .page {
   position: relative;
   width: 100%;
@@ -233,8 +245,10 @@ body._lock {
   align-items: center;
 }
 .projects__title {
+  max-width: 100%;
   font-size: 44px;
   padding-bottom: 30px;
+  text-align: center;
 }
 .projects__description {
   font-style: italic;
@@ -244,8 +258,10 @@ body._lock {
 }
 .projects__image {
   padding-bottom: 30px;
+  height: calc(200px + 352 * ((100vw - 320px) / 1600));
 }
 .projects__image img {
+  min-width: 100%;
   object-fit: cover;
 }
 .projects__button {
@@ -294,4 +310,74 @@ body._lock {
 
 .projects__gp-link:hover {
   color: #233000;
+}
+
+@media (max-width: 700px) {
+  .mainscreen__title {
+    padding-top: 50px;
+    font-size: 64px;
+    line-height: 70px;
+  }
+  .mainscreen__subtitle {
+    font-size: 20px;
+  }
+  .mainscreen__arrow {
+    width: 40px;
+    margin-bottom: 30px;
+  }
+  .projects__tab {
+    font-size: 14px;
+  }
+  .projects__block {
+    padding: 20px;
+    font-size: 14px;
+  }
+  .projects__title {
+    font-size: 34px;
+    padding-bottom: 20px;
+  }
+  .projects__description {
+    max-width: 400px;
+    padding-bottom: 20px;
+  }
+  .projects__image {
+    padding-bottom: 20px;
+    height: calc(200px + 352 * ((100vw - 320px) / 1600));
+  }
+  .projects__image img {
+    min-width: 100%;
+    object-fit: cover;
+  }
+  .projects__gp-link {
+    margin-right: 30px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px 0;
+    width: 130px;
+  }
+}
+@media (max-width: 450px) {
+  .mainscreen__title {
+    font-size: 44px;
+    line-height: 50px;
+  }
+  .mainscreen__subtitle {
+    font-size: 16px;
+  }
+  .mainscreen__arrow {
+    width: 40px;
+  }
+  .projects__title {
+    font-size: 26px;
+  }
+  .projects__image {
+    height: calc(150px + 402 * ((100vw - 320px) / 1600));
+  }
+  .projects__gp-link {
+    margin-right: 10px;
+  }
+  .btn {
+    width: 100px;
+  }
 }
